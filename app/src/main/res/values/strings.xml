@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">amian</string>
+    <string name="add_place_button">Add Place</string>
 </resources>
