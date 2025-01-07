@@ -5,6 +5,9 @@ import kotlinx.serialization.Serializable
 sealed interface Route {
 
     @Serializable
+    data object AmianGraph: Route
+
+    @Serializable
     data object PlaceList: Route
 
     @Serializable

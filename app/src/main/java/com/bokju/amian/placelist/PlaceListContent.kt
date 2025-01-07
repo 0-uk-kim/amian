@@ -1,6 +1,7 @@
 package com.bokju.amian.placelist
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.padding
@@ -16,6 +17,7 @@ import com.bokju.amian.utils.dashedModifier
 
 @Composable
 fun PlaceListContent(
+    onAction: (PlaceListAction) -> Unit,
     modifier: Modifier = Modifier
 ) {
     LazyVerticalGrid(
@@ -35,6 +37,9 @@ fun PlaceListContent(
                             radius = 8.dp
                         )
                     )
+                    .clickable {
+                        onAction(PlaceListAction.OnPlaceAddClick)
+                    }
             )
         }
     }
@@ -45,6 +50,7 @@ fun PlaceListContent(
 fun PlaceListContentPreview() {
     AmianTheme {
         PlaceListContent(
+            onAction = {},
             modifier = Modifier.background(MaterialTheme.colorScheme.background)
         )
     }
