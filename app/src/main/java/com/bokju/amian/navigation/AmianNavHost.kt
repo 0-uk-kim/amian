@@ -5,9 +5,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
-import com.bokju.amian.placedetail.PlaceDetailScreen
 import com.bokju.amian.placelist.PlaceListAction
 import com.bokju.amian.placelist.PlaceListScreen
+import com.bokju.amian.placesearch.PlaceSearchScreen
 
 @Composable
 fun AmianNavHost() {
@@ -24,14 +24,14 @@ fun AmianNavHost() {
                 PlaceListScreen { action ->
                     when (action) {
                         is PlaceListAction.OnPlaceAddClick -> {
-                            navController.navigate(Route.PlaceDetail)
+                            navController.navigate(Route.PlaceSearch)
                         }
                     }
                 }
             }
 
-            composable<Route.PlaceDetail> {
-                PlaceDetailScreen()
+            composable<Route.PlaceSearch> {
+                PlaceSearchScreen()
             }
         }
     }

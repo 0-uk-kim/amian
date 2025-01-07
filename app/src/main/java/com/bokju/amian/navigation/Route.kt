@@ -11,5 +11,8 @@ sealed interface Route {
     data object PlaceList: Route
 
     @Serializable
+    data object PlaceSearch: Route
+
+    @Serializable
     data object PlaceDetail: Route
 }
