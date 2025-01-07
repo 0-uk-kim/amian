@@ -1,4 +1,4 @@
-package com.bokju.amian.main
+package com.bokju.amian.placelist
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.PaddingValues
@@ -15,7 +15,7 @@ import com.bokju.amian.utils.DarkLightPreview
 import com.bokju.amian.utils.dashedModifier
 
 @Composable
-fun MainContent(
+fun PlaceListContent(
     modifier: Modifier = Modifier
 ) {
     LazyVerticalGrid(
@@ -42,9 +42,9 @@ fun MainContent(
 
 @DarkLightPreview
 @Composable
-fun MainContentPreview() {
+fun PlaceListContentPreview() {
     AmianTheme {
-        MainContent(
+        PlaceListContent(
             modifier = Modifier.background(MaterialTheme.colorScheme.background)
         )
     }

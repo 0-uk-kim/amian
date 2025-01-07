@@ -1,4 +1,4 @@
-package com.bokju.amian.main
+package com.bokju.amian.placelist
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
