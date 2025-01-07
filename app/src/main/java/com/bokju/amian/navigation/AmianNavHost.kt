@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
+import com.bokju.amian.placedetail.PlaceDetailScreen
 import com.bokju.amian.placelist.PlaceListAction
 import com.bokju.amian.placelist.PlaceListScreen
 
@@ -30,7 +31,7 @@ fun AmianNavHost() {
             }
 
             composable<Route.PlaceDetail> {
-
+                PlaceDetailScreen()
             }
         }
     }
