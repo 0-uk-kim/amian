@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.jetbrains.compose.navigation)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.accompanist.permissions)
+    implementation(libs.bundles.ktor)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
