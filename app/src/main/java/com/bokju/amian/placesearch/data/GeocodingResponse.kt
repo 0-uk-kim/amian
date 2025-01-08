@@ -7,7 +7,7 @@ data class GeocodingResponse(
     val status: String,
     val meta: Meta,
     val addresses: List<Address>,
-    val errorMessage: String?
+    val errorMessage: String
 )
 
 @Serializable
