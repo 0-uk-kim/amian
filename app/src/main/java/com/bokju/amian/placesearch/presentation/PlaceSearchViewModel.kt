@@ -29,7 +29,7 @@ class PlaceSearchViewModel(
     private val _state = MutableStateFlow(PlaceSearchState())
     val state = _state
         .onStart {
-
+            observeSearchQuery()
         }
         .stateIn(
             scope = viewModelScope,
