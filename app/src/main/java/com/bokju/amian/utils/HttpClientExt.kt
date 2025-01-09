@@ -1,6 +1,7 @@
 package com.bokju.amian.utils
 
 import com.bokju.amian.utils.model.DataError
+import com.bokju.amian.utils.model.Error
 import com.bokju.amian.utils.model.Result
 import io.ktor.client.call.NoTransformationFoundException
 import io.ktor.client.call.body
@@ -43,5 +44,12 @@ suspend inline fun <reified T> responseToResult(
         429 -> Result.Failure(DataError.Remote.TOO_MANY_REQUESTS)
         in 500..599 -> Result.Failure(DataError.Remote.SERVER)
         else -> Result.Failure(DataError.Remote.UNKNOWN)
+    }
+}
+
+inline fun <T, E : Error, R> Result<T, E>.map(map: (T) -> R): Result<R, E> {
+    return when (this) {
+        is Result.Failure -> Result.Failure(error)
+        is Result.Success -> Result.Success(map(data))
     }
 }
