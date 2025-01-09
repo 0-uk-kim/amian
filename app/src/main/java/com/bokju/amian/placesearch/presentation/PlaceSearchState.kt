@@ -4,6 +4,8 @@ import com.bokju.amian.placesearch.domain.PlaceResult
 import com.bokju.amian.utils.UiText
 
 data class PlaceSearchState(
+    val longitude: Double? = null,
+    val latitude: Double? = null,
     val searchQuery: String = "",
     val isLoading: Boolean = false,
     val searchResults: List<PlaceResult> = emptyList(),

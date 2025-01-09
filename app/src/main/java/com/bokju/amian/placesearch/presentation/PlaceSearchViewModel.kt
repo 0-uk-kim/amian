@@ -39,6 +39,15 @@ class PlaceSearchViewModel(
 
     fun onAction(action: PlaceSearchAction) {
         when (action) {
+            is PlaceSearchAction.UpdateCurrentLocation -> {
+                _state.update {
+                    it.copy(
+                        longitude = action.longitude,
+                        latitude = action.latitude
+                    )
+                }
+            }
+
             is PlaceSearchAction.OnSearchQueryChange -> {
                 _state.update {
                     it.copy(searchQuery = action.query)

@@ -57,6 +57,8 @@ dependencies {
     implementation(libs.accompanist.permissions)
     implementation(libs.bundles.ktor)
     implementation(libs.bundles.koin)
+    implementation(libs.play.services.location)
+    implementation(libs.kotlin.coroutines.play)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
