@@ -8,7 +8,7 @@ import androidx.navigation.compose.rememberNavController
 import com.bokju.amian.permission.AmianPermission
 import com.bokju.amian.placelist.PlaceListAction
 import com.bokju.amian.placelist.PlaceListScreen
-import com.bokju.amian.placesearch.PlaceSearchScreen
+import com.bokju.amian.placesearch.presentation.PlaceSearchScreen
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.rememberMultiplePermissionsState
 
