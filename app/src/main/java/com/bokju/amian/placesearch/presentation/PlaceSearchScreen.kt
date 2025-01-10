@@ -25,6 +25,14 @@ fun PlaceSearchScreen(
     val state by placeSearchViewModel.state.collectAsStateWithLifecycle()
 
     Scaffold(
+        topBar = {
+            PlaceSearchBar(
+                query = state.searchQuery,
+                onQueryChange = {
+                    placeSearchViewModel.onAction(PlaceSearchAction.OnSearchQueryChange(it))
+                }
+            )
+        },
         snackbarHost = {
             SnackbarHost(snackbarHostState)
         }
